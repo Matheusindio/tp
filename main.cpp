@@ -1,5 +1,6 @@
 #include <iostream>
 #include "avaliacao.cpp"
+#include "dinheiro.cpp"
 
 using namespace std;
 
@@ -7,11 +8,31 @@ int main(){
     
     Avaliacao aval;
 
-    if(aval.setValor(6)){
+    if(aval.setValor(3)){
         cout << "Valor = " << aval.getValor() << endl;
     } else {
         cout << "Valor invalido" << endl;
     }
     
+        if(aval.setValor(6)){
+        cout << "Valor = " << aval.getValor() << endl;
+    } else {
+        cout << "Valor invalido" << endl;
+    }
+
+    Dinheiro money;
+    
+    if(money.setValor(200000)){
+        cout << "Preço = " << money.getValor() << endl;
+    } else {
+        cout << "Preço invalido" << endl;
+    }
+    
+    if(money.setValor(1000000)){
+        cout << "Preço = " << money.getValor() << endl;
+    } else {
+        cout << "Preço invalido" << endl;
+    }
+
     return 0;
 }
