@@ -41,6 +41,11 @@ int main(){
     } else {
         cout << "Código Invalido" << endl;
     }
+    if(code.setValor("ABC**E")){
+        cout << "Código = " << code.getValor() << endl;
+    } else {
+        cout << "Código Invalido" << endl;
+    }
 
     return 0;
 }
