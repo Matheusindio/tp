@@ -3,6 +3,7 @@
 #include "dinheiro.cpp"
 #include "codigo.cpp"
 #include "duracao.cpp"
+#include "hora.cpp"
 
 using namespace std;
 
