@@ -2,6 +2,7 @@
 #include "avaliacao.cpp"
 #include "dinheiro.cpp"
 #include "codigo.cpp"
+#include "duracao.cpp"
 
 using namespace std;
 
@@ -47,6 +48,18 @@ int main(){
         cout << "Código Invalido" << endl;
     }
 
+    Duracao dur;
+    if(dur.setValor(210)){
+        cout << "Duração = " << dur.getValor() << endl;
+    } else {
+        cout << "Duração Invalida" << endl;
+    }
+        if(dur.setValor(361)){
+        cout << "Duração = " << dur.getValor() << endl;
+    } else {
+        cout << "Duração Invalida" << endl;
+    }
+
     return 0; 
-    
+
 }
