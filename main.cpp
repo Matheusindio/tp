@@ -5,6 +5,7 @@
 #include "codigo.cpp"
 #include "duracao.cpp"
 #include "hora.cpp"
+#include "senha.cpp"
 
 using namespace std;
 
@@ -62,9 +63,7 @@ int main(){
         cout << "Duração Invalida" << endl;
     }
 
-    return 0; 
 
-    ///Horário 00:00
     Horario horar;
     int hora, minuto;
 
@@ -77,4 +76,18 @@ int main(){
         cout << "Horario Invalido" << endl;
     }
 
+    Senha senhar;
+
+    if(senhar.setValor("02569")){
+        cout << "Senha Correta! -- " << senhar.getValor() << endl;
+    } else{
+        cout << "Senha Invalida!" << endl;
+    }
+    if(senhar.setValor("12345")){
+        cout << "Senha Correta! -- " << senhar.getValor() << endl;
+    } else{
+        cout << "Senha Invalida!" << endl;
+    }
+
+   
 }
