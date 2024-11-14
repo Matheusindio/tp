@@ -62,4 +62,17 @@ int main(){
 
     return 0; 
 
+    ///Horário 00:00
+    Horario horar;
+    int hora, minuto;
+
+    if (horar.setHora(0) && horar.setMinuto(5)){
+         cout << "Horario = "
+             << setw(2) << setfill('0') << horar.getHora() << ":"
+             << setw(2) << setfill('0') << horar.getMinuto()
+             << endl;
+    } else{
+        cout << "Horario Invalido" << endl;
+    }
+
 }
