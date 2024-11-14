@@ -10,16 +10,13 @@ private:
     std::string str;
     bool validar(std::string str);
 public:
-    Codigo(/* args */);
-    ~Codigo();
+    bool setValor(std::string str);
+    std::string getValor() const;
 };
 
-Codigo::Codigo(/* args */)
-{
-}
+inline std::string Codigo :: getValor() const{
+    return str;
 
-Codigo::~Codigo()
-{
 }
 
 #endif

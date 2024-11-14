@@ -16,6 +16,16 @@ bool Codigo::validar(std::string str){
     return true;                     
         
     }
-    
+
+}
+
+bool Codigo::setValor(std::string str){
+    if(!validar(str)){
+        return false;
+    }
+
+    this->str = str;
+    return true;
+
 
 }
