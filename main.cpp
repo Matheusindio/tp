@@ -6,6 +6,7 @@
 #include "duracao.cpp"
 #include "hora.cpp"
 #include "senha.cpp"
+#include "nome.cpp"
 
 using namespace std;
 
@@ -89,5 +90,17 @@ int main(){
         cout << "Senha Invalida!" << endl;
     }
 
+    Nome nomear;
+    
+    if(nomear.setValor("DANIEL1234")){
+        cout << "Nome Correto! -- " << nomear.getValor() << endl;
+    } else{
+        cout << "Nome Invalido!" << endl;
+    }
+    if(nomear.setValor("DANIELDEZANBABYJOAOFILIPEMONTEIRODEARAUJOLIMA")){
+        cout << "Nome Correto! -- " << nomear.getValor() << endl;
+    } else{
+        cout << "Nome Invalido!" << endl;
+    }
    
 }
