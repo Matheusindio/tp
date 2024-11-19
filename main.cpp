@@ -1,12 +1,12 @@
 #include <iostream>
 #include <iomanip>
-#include "avaliacao.cpp"
-#include "dinheiro.cpp"
-#include "codigo.cpp"
-#include "duracao.cpp"
-#include "hora.cpp"
-#include "senha.cpp"
-#include "nome.cpp"
+#include "dominios/avaliacao.cpp"
+#include "dominios/dinheiro.cpp"
+#include "dominios/codigo.cpp"
+#include "dominios/duracao.cpp"
+#include "dominios/hora.cpp"
+#include "dominios/senha.cpp"
+#include "dominios/nome.cpp"
 
 using namespace std;
 
