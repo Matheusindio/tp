@@ -7,6 +7,7 @@
 #include "dominios/hora.cpp"
 #include "dominios/senha.cpp"
 #include "dominios/nome.cpp"
+#include "dominios/data.cpp"
 
 using namespace std;
 
@@ -103,4 +104,14 @@ int main(){
         cout << "Nome Invalido!" << endl;
     }
    
+    Data datar;
+
+    if (datar.setData(29,2,00)){ //dia,mes,ano
+         cout << "Data = "
+             << setw(2) << setfill('0') << datar.getDia() << "/"
+             << setw(2) << setfill('0') << datar.getMes() << "/"
+             << setw(2) << setfill('0') << datar.getAno() << endl;
+    } else{
+        cout << "Data Incorreta" << endl;
+    }
 }
