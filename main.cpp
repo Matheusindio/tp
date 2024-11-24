@@ -106,7 +106,7 @@ int main(){
    
     Data datar;
 
-    if (datar.setData(29,2,00)){ //dia,mes,ano
+    if (datar.setData(29,01,0)){ //dia,mes,ano
          cout << "Data = "
              << setw(2) << setfill('0') << datar.getDia() << "/"
              << setw(2) << setfill('0') << datar.getMes() << "/"
