@@ -65,12 +65,11 @@ int main(){
     } else {
         cout << "Duração Invalida" << endl;
     }
-
-
-    Horario horar;
     
+    Horario horar;
+    int hora, minuto;
 
-    if (horar.setHora(0) && horar.setMinuto(5)){
+    if (horar.setHora(5,0)){
          cout << "Horario = "
              << setw(2) << setfill('0') << horar.getHora() << ":"
              << setw(2) << setfill('0') << horar.getMinuto()
