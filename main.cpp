@@ -67,7 +67,6 @@ int main(){
     }
     
     Horario horar;
-    int hora, minuto;
 
     if (horar.setHora(5,0)){
          cout << "Horario = "
@@ -118,13 +117,17 @@ int main(){
 
 
 Viagem viagem; 
-    if (datar.setData(29,02,1)){ //dia,mes,ano
+    if (datar.setData(29,02,0) && nomear.setValor("DANIEL1234") && aval.setValor(3)){ //dia,mes,ano
         viagem.setDate(datar);
+        viagem.setName(nomear);
+        viagem.setAvaliation(aval);
          cout << "Data = "
              << setw(2) << setfill('0') << viagem.getDate().getDia() << "/"
              << setw(2) << setfill('0') << viagem.getDate().getMes() << "/"
              << setw(2) << setfill('0') << viagem.getDate().getAno() << endl;
+         cout << "Nome = " << viagem.getName().getValor() << endl;
+         cout << "Avaliação = " << viagem.getAvalation().getValor() << endl;
     } else{
-        cout << "Data Incorreta" << endl;
+        cout << "Informações Incorretas" << endl;
     }
 }
