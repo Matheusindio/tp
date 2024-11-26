@@ -8,6 +8,7 @@
 #include "dominios/senha.cpp"
 #include "dominios/nome.cpp"
 #include "dominios/data.cpp"
+#include "../entidades/viagem.hpp"
 
 using namespace std;
 
@@ -67,7 +68,7 @@ int main(){
 
 
     Horario horar;
-    int hora, minuto;
+    
 
     if (horar.setHora(0) && horar.setMinuto(5)){
          cout << "Horario = "
@@ -114,4 +115,13 @@ int main(){
     } else{
         cout << "Data Incorreta" << endl;
     }
+
+
+
+Viagem viagem; 
+Data data; 
+ data.setValor(29,01,10); // Replicar a linha para cada domínio instanciado.
+ viagem.set(data); // Replicar a linha para cada domínio instanciado.
+ cout << viagem.getviagem().getValor(); 
+
 }
