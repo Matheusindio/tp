@@ -8,7 +8,7 @@
 #include "dominios/senha.cpp"
 #include "dominios/nome.cpp"
 #include "dominios/data.cpp"
-#include "../entidades/viagem.hpp"
+#include "entidades/viagem.hpp"
 
 using namespace std;
 
@@ -119,9 +119,13 @@ int main(){
 
 
 Viagem viagem; 
-Data data; 
- data.setValor(29,01,10); // Replicar a linha para cada domínio instanciado.
- viagem.set(data); // Replicar a linha para cada domínio instanciado.
- cout << viagem.getviagem().getValor(); 
-
+    if (datar.setData(29,02,1)){ //dia,mes,ano
+        viagem.setViagem(datar);
+         cout << "Data = "
+             << setw(2) << setfill('0') << viagem.getViagem().getDia() << "/"
+             << setw(2) << setfill('0') << viagem.getViagem().getMes() << "/"
+             << setw(2) << setfill('0') << viagem.getViagem().getAno() << endl;
+    } else{
+        cout << "Data Incorreta" << endl;
+    }
 }
