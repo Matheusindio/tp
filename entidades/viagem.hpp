@@ -6,12 +6,12 @@ using namespace std;
 
 class Viagem {
  private:
- Data date;                              //entidade = Viagem
+ Codigo code;                              //entidade = Viagem
  Nome name;                              //Dominio = Data
  Avaliacao avaliation;                   //NomeAtributo = date
  public:
- void setDate(const Data& date);
- Data getDate() const;
+ void setCode(const Codigo& code);
+ Codigo getCode() const;
  void setName(const Nome& name);
  Nome getName() const;
  void setAvaliation(const Avaliacao& avaliation);
@@ -19,11 +19,11 @@ class Viagem {
  
 };
 
-inline void Viagem::setDate(const Data &date){
- this->date = date;
+inline void Viagem::setCode(const Codigo &code){
+ this->code = code;
 }
-inline Data Viagem::getDate() const{
- return date;
+inline Codigo Viagem::getCode() const{
+ return code;
 }
 
 inline void Viagem::setAvaliation(const Avaliacao &avaliation){

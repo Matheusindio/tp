@@ -117,14 +117,11 @@ int main(){
 
 
 Viagem viagem; 
-    if (datar.setData(29,02,0) && nomear.setValor("DANIEL1234") && aval.setValor(3)){ //dia,mes,ano
-        viagem.setDate(datar);
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3)){ //dia,mes,ano
+        viagem.setCode(code);
         viagem.setName(nomear);
         viagem.setAvaliation(aval);
-         cout << "Data = "
-             << setw(2) << setfill('0') << viagem.getDate().getDia() << "/"
-             << setw(2) << setfill('0') << viagem.getDate().getMes() << "/"
-             << setw(2) << setfill('0') << viagem.getDate().getAno() << endl;
+         cout << "Codigo = "<< viagem.getCode().getValor()<< endl;
          cout << "Nome = " << viagem.getName().getValor() << endl;
          cout << "Avaliação = " << viagem.getAvalation().getValor() << endl;
     } else{
