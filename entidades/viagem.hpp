@@ -6,17 +6,17 @@ using namespace std;
 
 class Viagem {
  private:
- Data data; 
+ Data date; 
  public:
- void setViagem(const Data& data);
- Data getViagem() const;
+ void setDate(const Data& date);
+ Data getDate() const;
 };
 
-inline void Viagem::setViagem(const Data &data){
- this->data = data;
+inline void Viagem::setDate(const Data &date){
+ this->date = date;
 }
-inline Data Viagem::getViagem() const{
- return data;
+inline Data Viagem::getDate() const{
+ return date;
 }
 
 #endif

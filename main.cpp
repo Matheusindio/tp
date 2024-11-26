@@ -120,11 +120,11 @@ int main(){
 
 Viagem viagem; 
     if (datar.setData(29,02,1)){ //dia,mes,ano
-        viagem.setViagem(datar);
+        viagem.setDate(datar);
          cout << "Data = "
-             << setw(2) << setfill('0') << viagem.getViagem().getDia() << "/"
-             << setw(2) << setfill('0') << viagem.getViagem().getMes() << "/"
-             << setw(2) << setfill('0') << viagem.getViagem().getAno() << endl;
+             << setw(2) << setfill('0') << viagem.getDate().getDia() << "/"
+             << setw(2) << setfill('0') << viagem.getDate().getMes() << "/"
+             << setw(2) << setfill('0') << viagem.getDate().getAno() << endl;
     } else{
         cout << "Data Incorreta" << endl;
     }
