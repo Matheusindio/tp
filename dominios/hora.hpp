@@ -5,11 +5,10 @@ class Horario {
     private:
         int hora;
         int minuto;
-        bool validarHora(int hora);
-        bool validarMinuto(int minuto);
+        bool validarHora(int hora, int minuto);
+
     public:
-        bool setHora(int hora);
-        bool setMinuto(int minuto);
+        bool setHora(int hora, int minuto);
         int getHora() const;
         int getMinuto() const;
 };
