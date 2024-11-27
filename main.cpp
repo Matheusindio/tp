@@ -135,27 +135,33 @@ Viagem viagem;
 Destino destiny;
 Data datainit;
 Data datafim;
-    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3) && datainit.setData(1,9,4) && datafim.setData(1,2,3)){ //dia,mes,ano
+try {
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3) &&
+        datainit.setData(1, 9, 4) && datafim.setData(28, 2, 2)) {
+        
         destiny.setCode(code);
         destiny.setName(nomear);
         destiny.setAvaliation(aval);
-        destiny.setDatainit(datainit);
-        destiny.setDatafim(datafim);
-         cout << "Codigo = "<< destiny.getCode().getValor()<< endl;
-         cout << "Nome = " << destiny.getName().getValor() << endl;
-         cout << "Avaliação = " << destiny.getAvaliation().getValor() << endl;
-         cout << "Data de ínicio = "
-             << setw(2) << setfill('0') << destiny.getDatainit().getDia() << "/"
-             << setw(2) << setfill('0') << destiny.getDatainit().getMes() << "/"
-             << setw(2) << setfill('0') << destiny.getDatainit().getAno() << endl;
-        cout << "Data de término = "
-             << setw(2) << setfill('0') << destiny.getDatafim().getDia() << "/"
-             << setw(2) << setfill('0') << destiny.getDatafim().getMes() << "/"
-             << setw(2) << setfill('0') << destiny.getDatafim().getAno() << endl;
+        destiny.setDatas(datainit, datafim);
 
-    } else{
-        cout << "Informações Incorretas" << endl;
+        std::cout << "Codigo = " << destiny.getCode().getValor() << std::endl;
+        std::cout << "Nome = " << destiny.getName().getValor() << std::endl;
+        std::cout << "Avaliação = " << destiny.getAvaliation().getValor() << std::endl;
+        std::cout << "Data de ínicio = "
+                  << std::setw(2) << std::setfill('0') << destiny.getDatainit().getDia() << "/"
+                  << std::setw(2) << std::setfill('0') << destiny.getDatainit().getMes() << "/"
+                  << std::setw(2) << std::setfill('0') << destiny.getDatainit().getAno() << std::endl;
+        std::cout << "Data de término = "
+                  << std::setw(2) << std::setfill('0') << destiny.getDatafim().getDia() << "/"
+                  << std::setw(2) << std::setfill('0') << destiny.getDatafim().getMes() << "/"
+                  << std::setw(2) << std::setfill('0') << destiny.getDatafim().getAno() << std::endl;
+    } else {
+        std::cout << "Data inserida inexistente." << std::endl;
     }
+} catch (const std::invalid_argument& e) {
+    std::cerr << "Erro: " << e.what() << std::endl;
+}
+
     
 
 }
