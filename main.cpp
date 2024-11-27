@@ -9,6 +9,10 @@
 #include "dominios/nome.cpp"
 #include "dominios/data.cpp"
 #include "entidades/viagem.hpp"
+#include "entidades/atividade.hpp"
+#include "entidades/conta.hpp"
+#include "entidades/hospedagem.hpp"
+#include "entidades/destino.hpp"
 
 using namespace std;
 
@@ -127,4 +131,31 @@ Viagem viagem;
     } else{
         cout << "Informações Incorretas" << endl;
     }
+
+Destino destiny;
+Data datainit;
+Data datafim;
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3) && datainit.setData(1,9,4) && datafim.setData(1,2,3)){ //dia,mes,ano
+        destiny.setCode(code);
+        destiny.setName(nomear);
+        destiny.setAvaliation(aval);
+        destiny.setDatainit(datainit);
+        destiny.setDatafim(datafim);
+         cout << "Codigo = "<< destiny.getCode().getValor()<< endl;
+         cout << "Nome = " << destiny.getName().getValor() << endl;
+         cout << "Avaliação = " << destiny.getAvaliation().getValor() << endl;
+         cout << "Data de ínicio = "
+             << setw(2) << setfill('0') << destiny.getDatainit().getDia() << "/"
+             << setw(2) << setfill('0') << destiny.getDatainit().getMes() << "/"
+             << setw(2) << setfill('0') << destiny.getDatainit().getAno() << endl;
+        cout << "Data de término = "
+             << setw(2) << setfill('0') << destiny.getDatafim().getDia() << "/"
+             << setw(2) << setfill('0') << destiny.getDatafim().getMes() << "/"
+             << setw(2) << setfill('0') << destiny.getDatafim().getAno() << endl;
+
+    } else{
+        cout << "Informações Incorretas" << endl;
+    }
+    
+
 }

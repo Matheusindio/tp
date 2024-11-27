@@ -1,6 +1,8 @@
 #ifndef VIAGEM_HPP_INCLUDED
 #define VIAGEM_HPP_INCLUDED
-#include "../dominios/data.hpp"
+#include "../dominios/codigo.hpp"
+#include "../dominios/nome.hpp"
+#include "../dominios/avaliacao.hpp"
 using namespace std;
 
 
