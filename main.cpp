@@ -136,8 +136,8 @@ Destino destiny;
 Data datainit;
 Data datafim;
 try {
-    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(0) &&
-        datainit.setData(1, 9, 4) && datafim.setData(28, 2, 2)) {
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3) &&
+        datainit.setData(1, 9, 4) && datafim.setData(28, 2, 6)) {
         
         destiny.setCode(code);
         destiny.setName(nomear);
