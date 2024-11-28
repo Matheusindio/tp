@@ -4,7 +4,7 @@
 #include "../dominios/avaliacao.hpp"
 #include "../dominios/codigo.hpp"
 #include "../dominios/data.hpp"
-#include <stdexcept> // Para exceções
+#include <stdexcept> 
 using namespace std;
 
 class Destino {

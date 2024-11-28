@@ -17,7 +17,7 @@ class Viagem {
  void setName(const Nome& name);
  Nome getName() const;
  void setAvaliation(const Avaliacao& avaliation);
- Avaliacao getAvalation() const;
+ Avaliacao getAvaliation() const;
  
 };
 
@@ -31,7 +31,7 @@ inline Codigo Viagem::getCode() const{
 inline void Viagem::setAvaliation(const Avaliacao &avaliation){
  this->avaliation = avaliation;
 }
-inline Avaliacao Viagem::getAvalation() const{
+inline Avaliacao Viagem::getAvaliation() const{
  return avaliation;
 }
 

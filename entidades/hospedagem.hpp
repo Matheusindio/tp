@@ -9,17 +9,17 @@ using namespace std;
 
 class Hospedagem {
  private:
- Codigo code;                              //entidade = Viagem
- Nome name;                              //Dominio = Data
+ Codigo code;                              
+ Nome name;                              
  Avaliacao avaliation;
- Dinheiro money;                  //NomeAtributo = date
+ Dinheiro money;                  
  public:
  void setCode(const Codigo& code);
  Codigo getCode() const;
  void setName(const Nome& name);
  Nome getName() const;
  void setAvaliation(const Avaliacao& avaliation);
- Avaliacao getAvalation() const;
+ Avaliacao getAvaliation() const;
  void setMoney(const Dinheiro& money);
  Dinheiro getMoney() const;
  
@@ -35,7 +35,7 @@ inline Codigo Hospedagem::getCode() const{
 inline void Hospedagem::setAvaliation(const Avaliacao &avaliation){
  this->avaliation = avaliation;
 }
-inline Avaliacao Hospedagem::getAvalation() const{
+inline Avaliacao Hospedagem::getAvaliation() const{
  return avaliation;
 }
 
