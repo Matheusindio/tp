@@ -118,8 +118,6 @@ int main(){
         cout << "Data Incorreta" << endl;
     }
 
-
-
 Viagem viagem; 
     if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3)){ //dia,mes,ano
         viagem.setCode(code);
@@ -132,12 +130,14 @@ Viagem viagem;
         cout << "Informações Incorretas" << endl;
     }
 
+
+
 Destino destiny;
 Data datainit;
 Data datafim;
 try {
     if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3) &&
-        datainit.setData(1, 9, 4) && datafim.setData(28, 2, 2)) {
+        datainit.setData(1, 9, 4) && datafim.setData(28, 2, 6)) {
         
         destiny.setCode(code);
         destiny.setName(nomear);
@@ -147,6 +147,8 @@ try {
         std::cout << "Codigo = " << destiny.getCode().getValor() << std::endl;
         std::cout << "Nome = " << destiny.getName().getValor() << std::endl;
         std::cout << "Avaliação = " << destiny.getAvaliation().getValor() << std::endl;
+    if(1)
+    {
         std::cout << "Data de ínicio = "
                   << std::setw(2) << std::setfill('0') << destiny.getDatainit().getDia() << "/"
                   << std::setw(2) << std::setfill('0') << destiny.getDatainit().getMes() << "/"
@@ -155,12 +157,23 @@ try {
                   << std::setw(2) << std::setfill('0') << destiny.getDatafim().getDia() << "/"
                   << std::setw(2) << std::setfill('0') << destiny.getDatafim().getMes() << "/"
                   << std::setw(2) << std::setfill('0') << destiny.getDatafim().getAno() << std::endl;
-    } else {
+    }
+    else {
         std::cout << "Data inserida inexistente." << std::endl;
     }
-} catch (const std::invalid_argument& e) {
+    }
+        else
+    {
+        cout << "informaçoes incorretas" << endl; 
+    }
+
+    //as vezes ta dando conflito com a info de viagem, o aval principalmente
+} 
+
+catch (const std::invalid_argument& e) {
     std::cerr << "Erro: " << e.what() << std::endl;
 }
+
 
     
 
