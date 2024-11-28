@@ -44,7 +44,7 @@ Destino destiny;
 Data datainit;
 Data datafim;
 try {
-    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3) &&
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(5) &&
         datainit.setData(1, 9, 4) && datafim.setData(28, 2, 6)) {
         
         destiny.setCode(code);
@@ -75,7 +75,8 @@ try {
         cout << "informaçoes incorretas" << endl; 
     }
 
-    //as vezes ta dando conflito com a info de viagem, o aval principalmente
+
+
 } 
 
 
@@ -106,7 +107,7 @@ Dinheiro diaria;
 
 Conta conta;
 
-    if(code.setValor("12346") && senhar.setValor("Everyt"))
+    if(code.setValor("123465") && senhar.setValor("Everyt"))
     {
         conta.setCode(code);
         conta.setPass(senhar);
@@ -122,7 +123,7 @@ Conta conta;
 Atividade activity;
 Dinheiro preco;
 
-    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData(1,2,4) && horario.setHora(1,2))
+    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData(29,2,4) && horario.setHora(12,2))
     {
         activity.setAval(aval);
         activity.setCode(code);
