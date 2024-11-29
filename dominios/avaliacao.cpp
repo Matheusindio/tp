@@ -1,19 +1,20 @@
 #include "avaliacao.hpp"
 
-bool Avaliacao::validar(int valor){
+
+
+void Avaliacao::validar(int valor){
     if(valor == 0 || valor == 1 || valor == 2 || valor == 3 || valor == 4  || valor == 5 ){
-        return true;
+        
     } else {
-        return false;
+        throw std::invalid_argument("Argumento Invalido");
+       
     }
 }
 
 bool Avaliacao::setValor(int valor){
-    if(!validar(valor)){
-        return false;
-    }
-    this->valor = valor;
-    return true;
+        validar(valor);
+        this->valor = valor;
+        return true;
 }
 
 

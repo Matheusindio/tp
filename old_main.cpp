@@ -8,110 +8,147 @@
 #include "dominios/senha.cpp"
 #include "dominios/nome.cpp"
 #include "dominios/data.cpp"
+#include "entidades/viagem.hpp"
+#include "entidades/atividade.hpp"
+#include "entidades/conta.hpp"
+#include "entidades/hospedagem.hpp"
+#include "entidades/destino.hpp"
 
 using namespace std;
 
+int main(){
 
+Data datar;
+Nome nomear;
+Avaliacao aval;
+Codigo code;
+Senha senhar;
+Horario horario;
+Duracao durar;
 
-int main()
-{
-     Avaliacao aval;
-
-    if(aval.setValor(3)){
-        cout << "Valor = " << aval.getValor() << endl;
-    } else {
-        cout << "Valor invalido" << endl;
+Viagem viagem; 
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(3)){ //dia,mes,ano
+        viagem.setCode(code);
+        viagem.setName(nomear);
+        viagem.setAvaliation(aval);
+         cout << "Codigo = "<< viagem.getCode().getValor()<< endl;
+         cout << "Nome = " << viagem.getName().getValor() << endl;
+         cout << "Avaliação = " << viagem.getAvaliation().getValor() << endl;
+    } else{
+        cout << "Informações Incorretas" << endl;
     }
+
+
+
+Destino destiny;
+Data datainit;
+Data datafim;
+try {
+    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(5) &&
+        datainit.setData(1, 9, 7) && datafim.setData(28, 2, 6)) {
+        
+        destiny.setCode(code);
+        destiny.setName(nomear);
+        destiny.setAvaliation(aval);
+        destiny.setDatas(datainit, datafim);
+
+        cout << "Codigo = " << destiny.getCode().getValor() << endl;
+        cout << "Nome = " << destiny.getName().getValor() << endl;
+        cout << "Avaliação = " << destiny.getAvaliation().getValor() << endl;
+    if(1)
+    {
+        cout << "Data de ínicio = "
+                  << setw(2) << setfill('0') << destiny.getDatainit().getDia() << "/"
+                  << setw(2) << setfill('0') << destiny.getDatainit().getMes() << "/"
+                  << setw(2) << setfill('0') << destiny.getDatainit().getAno() << endl;
+        cout << "Data de término = "
+                  << setw(2) << setfill('0') << destiny.getDatafim().getDia() << "/"
+                  << setw(2) << setfill('0') << destiny.getDatafim().getMes() << "/"
+                  << setw(2) << setfill('0') << destiny.getDatafim().getAno() << endl;
+    }
+    else {
+        std::cout << "Data inserida inexistente." << std::endl;
+    }
+    }
+        else
+    {
+        cout << "informaçoes incorretas" << endl; 
+    }
+
+
+
+} 
+
+
+catch (const invalid_argument& e) {
+    cerr << "Erro: " << e.what() << endl;
+}
+
+Hospedagem Hotel;
+Dinheiro diaria;
+    if(aval.setValor(1) && diaria.setValor(250) && nomear.setValor("DANIELA") && code.setValor("Codigo"))
+    {
+        Hotel.setCode(code);
+        Hotel.setAvaliation(aval);
+        Hotel.setMoney(diaria);
+        Hotel.setName(nomear);
+
+        cout << "Codigo = " << Hotel.getCode().getValor() << endl;
+        cout << "Nome = " << Hotel.getName().getValor() << endl;
+        cout << "Diaria = " << Hotel.getMoney().getValor() << endl;
+        cout << "Avaliação = " << Hotel.getAvaliation().getValor() << endl;
     
-        if(aval.setValor(6)){
-        cout << "Valor = " << aval.getValor() << endl;
-    } else {
-        cout << "Valor invalido" << endl;
+
+    }
+    else
+    {
+        cout << "Informações Incorretas" << endl;
     }
 
-    Dinheiro money;
-    
-    if(money.setValor(200000)){
-        cout << "Preço = " << money.getValor() << endl;
-    } else {
-        cout << "Preço invalido" << endl;
+Conta conta;
+
+    if(code.setValor("123465") && senhar.setValor("Everyt"))
+    {
+        conta.setCode(code);
+        conta.setPass(senhar);
+
+        cout << "Codigo = " << conta.getCode().getValor() << endl;
+        cout << "Senha = " << conta.getPass().getValor() << endl;
     }
-    
-    if(money.setValor(1000000)){
-        cout << "Preço = " << money.getValor() << endl;
-    } else {
-        cout << "Preço invalido" << endl;
+    else
+    {
+        cout << "Informações Incorretas" << endl;
     }
 
-    Codigo code;
-    if(code.setValor("ABCeeE")){
-        cout << "Código = " << code.getValor() << endl;
-    } else {
-        cout << "Código Invalido" << endl;
-    }
-    if(code.setValor("ABC**E")){
-        cout << "Código = " << code.getValor() << endl;
-    } else {
-        cout << "Código Invalido" << endl;
+Atividade activity;
+Dinheiro preco;
+
+    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData(29,2,5) && horario.setHora(12,2))
+    {
+        activity.setAval(aval);
+        activity.setCode(code);
+        activity.setData(datar);
+        activity.setDuracao(durar);
+        activity.setHorario(horario);
+        activity.setPreco(preco);
+        activity.setNome(nomear);
+
+        cout << "Avaliação" << activity.getAval().getValor() << endl;
+        cout << "Código = " << activity.getCode().getValor() << endl;
+        cout << "Duração = " << activity.getDuracao().getValor() << endl;
+        cout << "Preço = " << activity.getPreco().getValor() << endl;
+        cout << "Nome = " << activity.getNome().getValor() << endl;
+        cout << "Horário = "
+             << setw(2) << setfill('0') << activity.getHorario().getHora() << ":"
+             << setw(2) << setfill('0') << activity.getHorario().getMinuto() << endl;       
+        cout << "Data = "
+             << setw(2) << setfill('0') << activity.getData().getDia() << "/"
+             << setw(2) << setfill('0') << activity.getData().getMes() << "/"
+             << setw(2) << setfill('0') << activity.getData().getAno() << endl;
     }
 
-    Duracao dur;
-    if(dur.setValor(210)){
-        cout << "Duração = " << dur.getValor() << endl;
-    } else {
-        cout << "Duração Invalida" << endl;
-    }
-        if(dur.setValor(361)){
-        cout << "Duração = " << dur.getValor() << endl;
-    } else {
-        cout << "Duração Invalida" << endl;
-    }
-    
-    Horario horar;
-
-    if (horar.setHora(1,2)){
-         cout << "Horario = "
-             << setw(2) << setfill('0') << horar.getHora() << ":"
-             << setw(2) << setfill('0') << horar.getMinuto()
-             << endl;
-    } else{
-        cout << "Horario Invalido" << endl;
-    }
-
-    Senha senhar;
-
-    if(senhar.setValor("02569")){
-        cout << "Senha Correta! -- " << senhar.getValor() << endl;
-    } else{
-        cout << "Senha Invalida!" << endl;
-    }
-    if(senhar.setValor("12345")){
-        cout << "Senha Correta! -- " << senhar.getValor() << endl;
-    } else{
-        cout << "Senha Invalida!" << endl;
-    }
-
-    Nome nomear;
-    
-    if(nomear.setValor("DANIEL1234")){
-        cout << "Nome Correto! -- " << nomear.getValor() << endl;
-    } else{
-        cout << "Nome Invalido!" << endl;
-    }
-    if(nomear.setValor("DANIELDEZANBABYJOAOFILIPEMONTEIRODEARAUJOLIMA")){
-        cout << "Nome Correto! -- " << nomear.getValor() << endl;
-    } else{
-        cout << "Nome Invalido!" << endl;
-    }
-   
-    Data datar;
-
-    if (datar.setData(29,01,0)){ //dia,mes,ano
-         cout << "Data = "
-             << setw(2) << setfill('0') << datar.getDia() << "/"
-             << setw(2) << setfill('0') << datar.getMes() << "/"
-             << setw(2) << setfill('0') << datar.getAno() << endl;
-    } else{
-        cout << "Data Incorreta" << endl;
+    else
+    {
+        cout << "Informações Invalidas" << endl;
     }
 }
