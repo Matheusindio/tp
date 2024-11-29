@@ -16,7 +16,7 @@ class TUAvaliacao
 {
     private:
         const static int VALOR_VALIDO = 3;
-        const static int VALOR_INVALIDO = 30;
+        const static int VALOR_INVALIDO = 2;
         Avaliacao *avaliacao;
         int estado;
         void setUp();
