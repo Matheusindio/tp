@@ -1,29 +1,26 @@
 #include "codigo.hpp"
 #include <ctype.h>
 
-bool Codigo::validar(std::string str){
+void Codigo::validar(std::string str){
     int len = str.length();
     if (len != 6){
-        return false;
+        throw std::invalid_argument("Argumento Invalido");
     }
     else
     {
     for (char c : str) {          
         if (!isalnum(c)) {         
-            return false;          
+            throw std::invalid_argument("Argumento Invalido");        
         }
     }
-    return true;                     
+                         
         
     }
 
 }
 
 bool Codigo::setValor(std::string str){
-    if(!validar(str)){
-        return false;
-    }
-
+    validar(str);
     this->str = str;
     return true;
 

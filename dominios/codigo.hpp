@@ -8,7 +8,7 @@ class Codigo
 {
 private:
     std::string str;
-    bool validar(std::string str);
+    void validar(std::string str);
 public:
     bool setValor(std::string str);
     std::string getValor() const;

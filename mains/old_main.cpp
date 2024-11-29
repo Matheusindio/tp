@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "dominios/avaliacao.cpp"
+#include "../tp/dominios/avaliacao.cpp"
 #include "dominios/dinheiro.cpp"
 #include "dominios/codigo.cpp"
 #include "dominios/duracao.cpp"
