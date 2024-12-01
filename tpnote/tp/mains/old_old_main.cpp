@@ -1,13 +1,13 @@
 #include <iostream>
 #include <iomanip>
-#include "dominios/avaliacao.cpp"
-#include "dominios/dinheiro.cpp"
-#include "dominios/codigo.cpp"
-#include "dominios/duracao.cpp"
-#include "dominios/hora.cpp"
-#include "dominios/senha.cpp"
-#include "dominios/nome.cpp"
-#include "dominios/data.cpp"
+#include "../dominios/avaliacao.cpp"
+#include "../dominios/dinheiro.cpp"
+#include "../dominios/codigo.cpp"
+#include "../dominios/nome.cpp"
+#include "../dominios/duracao.cpp"
+#include "../dominios/hora.cpp"
+#include "../dominios/data.cpp"
+#include "../dominios/senha.cpp"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-     Avaliacao aval;
+        Avaliacao aval;
 
     if(aval.setValor(3)){
         cout << "Valor = " << aval.getValor() << endl;
@@ -55,6 +55,7 @@ int main()
         cout << "Código Invalido" << endl;
     }
 
+
     Duracao dur;
     if(dur.setValor(210)){
         cout << "Duração = " << dur.getValor() << endl;
@@ -67,13 +68,11 @@ int main()
         cout << "Duração Invalida" << endl;
     }
     
+
     Horario horar;
 
-    if (horar.setHora(1,2)){
-         cout << "Horario = "
-             << setw(2) << setfill('0') << horar.getHora() << ":"
-             << setw(2) << setfill('0') << horar.getMinuto()
-             << endl;
+    if (horar.setHorario("14:04")){
+         cout << "Horario = " << horar.getHorario() << endl;
     } else{
         cout << "Horario Invalido" << endl;
     }
@@ -106,7 +105,7 @@ int main()
    
     Data datar;
 
-    if (datar.setData("1/2/3")){ //dia,mes,ano
+    if (datar.setData("29/2/2")){ //dia,mes,ano
          cout << "Data = " << datar.getData() << endl; 
     } else{
         cout << "Data Incorreta" << endl;

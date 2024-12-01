@@ -1,18 +1,18 @@
 #include <iostream>
 #include <iomanip>
-#include "../tp/dominios/avaliacao.cpp"
-#include "dominios/dinheiro.cpp"
-#include "dominios/codigo.cpp"
-#include "dominios/duracao.cpp"
-#include "dominios/hora.cpp"
-#include "dominios/senha.cpp"
-#include "dominios/nome.cpp"
-#include "dominios/data.cpp"
-#include "entidades/viagem.hpp"
-#include "entidades/atividade.hpp"
-#include "entidades/conta.hpp"
-#include "entidades/hospedagem.hpp"
-#include "entidades/destino.hpp"
+#include "../dominios/avaliacao.cpp"
+#include "../dominios/dinheiro.cpp"
+#include "../dominios/codigo.cpp"
+#include "../dominios/nome.cpp"
+#include "../dominios/duracao.cpp"
+#include "../dominios/hora.cpp"
+#include "../dominios/data.cpp"
+#include "../dominios/senha.cpp"
+#include "../entidades/viagem.hpp"
+#include "../entidades/atividade.hpp"
+#include "../entidades/conta.hpp"
+#include "../entidades/hospedagem.hpp"
+#include "../entidades/destino.hpp"
 
 using namespace std;
 
@@ -45,7 +45,7 @@ Data datainit;
 Data datafim;
 try {
     if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(5) &&
-        datainit.setData(1, 9, 7) && datafim.setData(28, 2, 6)) {
+        datainit.setData("10/01/04") && datafim.setData("28/02/04")) {
         
         destiny.setCode(code);
         destiny.setName(nomear);
@@ -57,14 +57,8 @@ try {
         cout << "Avaliação = " << destiny.getAvaliation().getValor() << endl;
     if(1)
     {
-        cout << "Data de ínicio = "
-                  << setw(2) << setfill('0') << destiny.getDatainit().getDia() << "/"
-                  << setw(2) << setfill('0') << destiny.getDatainit().getMes() << "/"
-                  << setw(2) << setfill('0') << destiny.getDatainit().getAno() << endl;
-        cout << "Data de término = "
-                  << setw(2) << setfill('0') << destiny.getDatafim().getDia() << "/"
-                  << setw(2) << setfill('0') << destiny.getDatafim().getMes() << "/"
-                  << setw(2) << setfill('0') << destiny.getDatafim().getAno() << endl;
+        cout << "Data de ínicio = " << destiny.getDatainit().getData() << endl;
+        cout << "Data de término = " << destiny.getDatafim().getData() << endl;
     }
     else {
         std::cout << "Data inserida inexistente." << std::endl;
@@ -123,7 +117,7 @@ Conta conta;
 Atividade activity;
 Dinheiro preco;
 
-    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData(29,2,5) && horario.setHora(12,2))
+    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData("10,02,02") && horario.setHorario("12:04"))
     {
         activity.setAval(aval);
         activity.setCode(code);
@@ -138,13 +132,8 @@ Dinheiro preco;
         cout << "Duração = " << activity.getDuracao().getValor() << endl;
         cout << "Preço = " << activity.getPreco().getValor() << endl;
         cout << "Nome = " << activity.getNome().getValor() << endl;
-        cout << "Horário = "
-             << setw(2) << setfill('0') << activity.getHorario().getHora() << ":"
-             << setw(2) << setfill('0') << activity.getHorario().getMinuto() << endl;       
-        cout << "Data = "
-             << setw(2) << setfill('0') << activity.getData().getDia() << "/"
-             << setw(2) << setfill('0') << activity.getData().getMes() << "/"
-             << setw(2) << setfill('0') << activity.getData().getAno() << endl;
+        cout << "Horário = " << activity.getHorario().getHorario() << endl;       
+        cout << "Data = " << activity.getData().getData() << endl;
     }
 
     else

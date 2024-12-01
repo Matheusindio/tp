@@ -3,21 +3,17 @@
 
 class Horario {
     private:
-        int hora;
-        int minuto;
-        bool validarHora(int hora, int minuto);
+        std::string horario;
+        bool validarHorario(std::string horario);
 
     public:
-        bool setHora(int hora, int minuto);
-        int getHora() const;
-        int getMinuto() const;
+        bool setHorario(std::string horario);
+        std::string getHorario() const;
 };
 
-inline int Horario :: getHora() const{
-    return hora;
+inline std::string Horario :: getHorario() const{
+    return horario;
 }
-inline int Horario :: getMinuto() const{
-    return minuto;
-}
+
 
 #endif 
