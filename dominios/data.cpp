@@ -22,7 +22,7 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                return false;
+                throw std::invalid_argument("Data Invalida::Dia Errado");
             }
         }
             
@@ -36,7 +36,7 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                return false;
+                throw std::invalid_argument("Data Invalida::Data");
             }
         }
         else
@@ -47,7 +47,7 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                return false;
+                throw std::invalid_argument("Data Invalida::Data");
             }
         }
     }
@@ -60,18 +60,18 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                return false;
+                throw std::invalid_argument("Data Invalida::Data");
             }
             }
     }
     else
     {
-        return false;
+        throw std::invalid_argument("Data Invalida::Data");
     }
 }
 else
 {
-    return false;
+    throw std::invalid_argument("Data Invalida::Data");
 }
 
             }
@@ -80,10 +80,28 @@ else
 
 
 bool Data::setData(std::string data) {
-    if (!validarData(data)) {
-        return false;
-    }
+    validarData(data);
     this -> data = data;
     return true;
 }
 
+
+bool Data::setDia(std::string data)
+{
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
+    this -> dia = dia;
+    return true;
+}
+
+bool Data::setMes(std::string data)
+{
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
+    this -> mes = mes;
+    return true;
+}
+bool Data::setAno(std::string data)
+{
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
+    this -> ano = ano;
+    return true;
+}

@@ -45,7 +45,7 @@ Data datainit;
 Data datafim;
 try {
     if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(5) &&
-        datainit.setData("10/01/04") && datafim.setData("28/02/04")) {
+        datainit.setData("10/01/04") && datafim.setData("30/02/04")) {
         
         destiny.setCode(code);
         destiny.setName(nomear);
@@ -68,9 +68,6 @@ try {
     {
         cout << "informaçoes incorretas" << endl; 
     }
-
-
-
 } 
 
 
@@ -117,7 +114,7 @@ Conta conta;
 Atividade activity;
 Dinheiro preco;
 
-    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData("10,02,02") && horario.setHorario("12:04"))
+    if(code.setValor("queroq") && durar.setValor(12) && preco.setValor(12.2) && aval.setValor(5) && nomear.setValor("alexandre") && datar.setData("10/02/02") && horario.setHorario("12:04"))
     {
         activity.setAval(aval);
         activity.setCode(code);
