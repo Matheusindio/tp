@@ -1,8 +1,14 @@
 #include "data.hpp"
+#include <cstdio>
 
 
 
-bool Data::validarData(int dia, int mes, int ano)  {
+
+bool Data::validarData(std::string data)  {
+    int dia;
+    int mes;
+    int ano;
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     int anobis = ano % 4;
 if(ano >= 00 && ano <= 99)
 {
@@ -73,13 +79,11 @@ else
 
 
 
-bool Data::setData(int dia, int mes, int ano) {
-    if (!validarData(dia, mes, ano)) {
+bool Data::setData(std::string data) {
+    if (!validarData(data)) {
         return false;
     }
-    this -> dia = dia;
-    this -> mes = mes;
-    this -> ano = ano;
+    this -> data = data;
     return true;
 }
 

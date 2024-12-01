@@ -18,8 +18,8 @@ using namespace std;
 class TUAvaliacao
 {
     private:
-        const static int VALOR_VALIDO = 3;
-        const static int VALOR_INVALIDO = 6;
+        const static int VALOR_VALIDO = 4;
+        const static int VALOR_INVALIDO = 9;
         Avaliacao *avaliacao;
         int estado;
         void setUp();
@@ -41,6 +41,27 @@ class TUCodigo
         const std::string VALOR_VALIDO = "AABBCC";
         const std::string VALOR_INVALIDO = "AABBCC**";
         Codigo *codigo;
+        int estado;
+        void setUp();
+        void tearDown();
+        void TestarCenarioValorValido();
+        void TestarCenarioValorInvalido();
+
+
+    public:
+
+        const static int SUCESSO = 0;
+        const static int FALHA = -1;
+        int run();
+
+};
+
+class TUData
+{
+    private:
+        const std::string VALOR_VALIDO = "02/07/04";
+        const std::string VALOR_INVALIDO = "40/07/04";
+        Data *data;
         int estado;
         void setUp();
         void tearDown();
