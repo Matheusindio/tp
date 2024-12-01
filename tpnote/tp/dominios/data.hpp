@@ -6,22 +6,16 @@
 
 class Data {
     private:
-        int dia;
-        int mes;
-        int ano;
+    int dia;
+    int mes;
+    int ano;
         std::string data;
         bool validarData(std::string data);
-        bool validarDia(std::string data);
-        bool validarMes(std::string data);
-        bool validarAno(std::string data);
         void extrairData(int &dia, int &mes, int &ano) const;
 
     public:
         
-        bool setData(std::string data);
-        void setDia(std::string data);
-        void setMes(std::string data);
-        void setAno(std::string data);
+        bool setData(std::string data); 
         std::string getData() const;
         int getDia() const;
         int getMes() const;
@@ -35,12 +29,15 @@ inline std::string Data::getData() const {
 }
 
 inline int Data::getDia() const {
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     return dia;
 }
 inline int Data::getMes() const {
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     return mes;
 }
 inline int Data::getAno() const {
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     return ano;
 }
 

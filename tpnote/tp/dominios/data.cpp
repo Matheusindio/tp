@@ -87,11 +87,3 @@ bool Data::setData(std::string data) {
     return true;
 }
 
-void Data::extrairData(int &dia, int &mes, int &ano) const {
-    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
-}
-
-void Data::setDia(std::string data)
-{
-    
-}
