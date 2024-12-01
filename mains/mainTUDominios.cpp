@@ -29,6 +29,17 @@ int main()
         break;
     }
 
+        TUData testeData;
+    switch(testeData.run())
+    {
+        case TUData::SUCESSO:cout << "SUCESSO" << endl;
+        break;
+
+
+        case TUData::FALHA:cout << "FALHA" << endl;
+        break;
+    }
+
 
     return 0;
 }
