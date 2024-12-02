@@ -78,13 +78,13 @@ inline void Destino::setDatas(const Data& datainit, const Data& datafim) {
 
 inline bool Destino::validarDatas(const Data& datainit, const Data& datafim) {
     if (datainit.getAno() > datafim.getAno()) {
-        return false;
+        throw std::invalid_argument("Datas Invalidas");
     }
     if (datainit.getAno() == datafim.getAno() && datainit.getMes() > datafim.getMes()) {
-        return false;
+        throw std::invalid_argument("Datas Invalidas");
     }
     if (datainit.getAno() == datafim.getAno() && datainit.getMes() == datafim.getMes() && datainit.getDia() > datafim.getDia()) {
-        return false;
+        throw std::invalid_argument("Datas Invalidas");
     }
     return true;
 }
