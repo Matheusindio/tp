@@ -5,13 +5,11 @@ bool Duracao::validar(int val){
     if(val >= 0 && val <= 360){
     return true;
     } else{
-    return false;
+    throw std::invalid_argument("Duração Invalida");
     }
 }
 bool Duracao::setValor(int val){
-    if(!validar(val)){
-        return false;
-    }
+    validar(val);
     this->val = val;
     return true;
 }

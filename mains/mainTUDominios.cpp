@@ -40,6 +40,60 @@ int main()
         break;
     }
 
+        TUDinheiro testeDinheiro;
+    switch(testeDinheiro.run())
+    {
+        case TUDinheiro::SUCESSO:cout << "SUCESSO" << endl;
+        break;
+
+
+        case TUDinheiro::FALHA:cout << "FALHA" << endl;
+        break;
+    }
+
+        TUDuracao testeDuracao;
+    switch(testeDuracao.run())
+    {
+        case TUDuracao::SUCESSO:cout << "SUCESSO" << endl;
+        break;
+
+
+        case TUDuracao::FALHA:cout << "FALHA" << endl;
+        break;
+    }
+
+        TUHorario testeHorario;
+    switch(testeHorario.run())
+    {
+        case TUHorario::SUCESSO:cout << "SUCESSO" << endl;
+        break;
+
+
+        case TUHorario::FALHA:cout << "FALHA" << endl;
+        break;
+    }
+
+        TUNome testeNome;
+    switch(testeNome.run())
+    {
+        case TUNome::SUCESSO:cout << "SUCESSO" << endl;
+        break;
+
+
+        case TUNome::FALHA:cout << "FALHA" << endl;
+        break;
+    }
+
+        TUSenha testeSenha;
+    switch(testeSenha.run())
+    {
+        case TUSenha::SUCESSO:cout << "SUCESSO" << endl;
+        break;
+
+
+        case TUSenha::FALHA:cout << "FALHA" << endl;
+        break;
+    }
 
     return 0;
 }

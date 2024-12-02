@@ -22,7 +22,7 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                throw std::invalid_argument("Data Invalida::Dia Errado");
+                throw std::invalid_argument("Data Invalida");
             }
         }
             
@@ -36,7 +36,7 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                throw std::invalid_argument("Data Invalida::Data");
+                throw std::invalid_argument("Data Invalida");
             }
         }
         else
@@ -47,7 +47,7 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                throw std::invalid_argument("Data Invalida::Data");
+                throw std::invalid_argument("Data Invalida");
             }
         }
     }
@@ -60,18 +60,18 @@ if(ano >= 00 && ano <= 99)
             }
             else
             {
-                throw std::invalid_argument("Data Invalida::Data");
+                throw std::invalid_argument("Data Invalida");
             }
             }
     }
     else
     {
-        throw std::invalid_argument("Data Invalida::Data");
+        throw std::invalid_argument("Data Invalida");
     }
 }
 else
 {
-    throw std::invalid_argument("Data Invalida::Data");
+    throw std::invalid_argument("Data Invalida");
 }
 
             }

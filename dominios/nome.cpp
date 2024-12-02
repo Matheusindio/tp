@@ -5,7 +5,7 @@ bool Nome::validar(std::string nome){
 
     if (nome.length() > 30)
     {
-        return false;
+        throw std::invalid_argument("Nome Incorreto.");
     } else{
         return true;
     }
@@ -14,9 +14,7 @@ bool Nome::validar(std::string nome){
 }
 
 bool Nome::setValor(std::string nome){
-    if(!validar(nome)){
-        return false;
-    }
+    validar(nome);
     this->nome = nome;
     return true;
 }

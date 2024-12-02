@@ -16,7 +16,7 @@ for (int j = 0; j < val_senha.length(); j++)
         
         if (c == d && j != i)
         {
-            return false;
+            throw std::invalid_argument("Senha Incorreta.");
           
         }
         else
@@ -52,7 +52,7 @@ for (int i = 0; i < val_senha.length(); i++)
 
 if (p == 5 || q == 5)
 {
-     return false;
+    throw std::invalid_argument("Senha Incorreta.");
     
 }
 
@@ -65,9 +65,7 @@ if (p == 5 || q == 5)
 
 
 bool Senha::setValor(std::string val_senha){
-    if(!validar(val_senha)){
-        return false;
-    }
+    validar(val_senha);
     this->val_senha = val_senha;
     return true;
 }

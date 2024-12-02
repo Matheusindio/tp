@@ -12,20 +12,18 @@ bool Horario::validarHorario(std::string horario) {
         }
         else
         {
-            return false;
+            throw std::invalid_argument("Horario incorreto.");
         }
     }
     else
     {
-        return false;
+            throw std::invalid_argument("Horario incorreto.");
     }
     
 }
 
 bool Horario::setHorario(std::string horario) {
-    if (!validarHorario(horario)) {
-        return false;
-    }
+    validarHorario(horario);
     this->horario = horario;
     return true;
 }
