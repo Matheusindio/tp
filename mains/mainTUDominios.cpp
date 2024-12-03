@@ -1,6 +1,13 @@
 #include <iostream>
 #include <stdexcept>
-#include "../testes/teste.cpp"
+#include "../testesDominios/testeAvaliacao.cpp"
+#include "../testesDominios/testeCodigo.cpp"
+#include "../testesDominios/testeData.cpp"
+#include "../testesDominios/testeDinheiro.cpp"
+#include "../testesDominios/testeDuracao.cpp"
+#include "../testesDominios/testeHorario.cpp"
+#include "../testesDominios/testeNome.cpp"
+#include "../testesDominios/testeSenha.cpp"
 
 
 using namespace std;
