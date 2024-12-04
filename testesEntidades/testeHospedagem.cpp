@@ -18,6 +18,10 @@ void TUHospedagem::testarCenario(){
     nome.setValor(VALOR_VALIDO_NOME);
     avaliacao.setValor(VALOR_VALIDO_AVALIACAO);
     dinheiro.setValor(VALOR_VALIDO_DINHEIRO);
+    hospedagem->setAvaliation(avaliacao);
+    hospedagem->setCode(codigo);
+    hospedagem->setName(nome);
+    hospedagem->setmoney(dinheiro)
 
     if(hospedagem->getAvaliation().getValor() != VALOR_VALIDO_AVALIACAO)
         estado = FALHA;
