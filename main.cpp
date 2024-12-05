@@ -1,18 +1,18 @@
 #include <iostream>
 #include <stdexcept>
-#include "../testesDominios/testeAvaliacao.cpp"
-#include "../testesDominios/testeCodigo.cpp"
-#include "../testesDominios/testeData.cpp"
-#include "../testesDominios/testeDinheiro.cpp"
-#include "../testesDominios/testeDuracao.cpp"
-#include "../testesDominios/testeHorario.cpp"
-#include "../testesDominios/testeNome.cpp"
-#include "../testesDominios/testeSenha.cpp"
-#include "../testesEntidades/testeviagem.cpp"
-#include "../testesEntidades/testeDestino.cpp"
-#include "../testesEntidades/testeConta.cpp"
-#include "../testesEntidades/testeHospedagem.cpp"
-#include "../testesEntidades/testeAtividade.cpp"
+#include "../tp/testesDominios/testeAvaliacao.cpp"
+#include "../tp/testesDominios/testeCodigo.cpp"
+#include "../tp/testesDominios/testeData.cpp"
+#include "../tp/testesDominios/testeDinheiro.cpp"
+#include "../tp/testesDominios/testeDuracao.cpp"
+#include "../tp/testesDominios/testeHorario.cpp"
+#include "../tp/testesDominios/testeNome.cpp"
+#include "../tp/testesDominios/testeSenha.cpp"
+#include "../tp/testesEntidades/testeviagem.cpp"
+#include "../tp/testesEntidades/testeDestino.cpp"
+#include "../tp/testesEntidades/testeConta.cpp"
+#include "../tp/testesEntidades/testeHospedagem.cpp"
+#include "../tp/testesEntidades/testeAtividade.cpp"
 
 using namespace std;
 
@@ -150,10 +150,10 @@ int main()
         TUHospedagem testeHospedagem;
         switch (testeHospedagem.run())
         {
-        case TUHospedagem::SUCESSO:cout << "SUCESSO Entidade Avaliação" << endl;
+        case TUHospedagem::SUCESSO:cout << "SUCESSO Entidade Hospedagem" << endl;
             break;
         
-        case TUHospedagem::FALHA:cout << "FALHA Entidade Avaliação" << endl;
+        case TUHospedagem::FALHA:cout << "FALHA Entidade Hospedagem" << endl;
             break;
         }
     return 0;
