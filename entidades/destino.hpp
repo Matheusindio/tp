@@ -29,9 +29,10 @@ class Destino {
     void setAvaliation(const Avaliacao& avaliation);
     Avaliacao getAvaliation() const;
 
-    void setDatas(const Data& datainit, const Data& datafim);
+    bool setDatas(const Data& datainit, const Data& datafim);
     Data getDatainit() const;
     Data getDatafim() const;
+    Data getDatas() const;
 };
 
 
@@ -67,26 +68,24 @@ inline Data Destino::getDatafim() const {
     return datafim;
 }
 
-inline void Destino::setDatas(const Data& datainit, const Data& datafim) {
-    if (!validarDatas(datainit, datafim)) {
-        throw std::invalid_argument("Erro ao inserir as datas: data inicial é posterior à data final.");
-    }
+inline bool Destino::setDatas(const Data& datainit, const Data& datafim) {
+    validarDatas(datainit, datafim);
     this->datainit = datainit;
     this->datafim = datafim;
+    return true;
 }
 
 
 inline bool Destino::validarDatas(const Data& datainit, const Data& datafim) {
-    if (datainit.getAno() > datafim.getAno()) {
-        throw std::invalid_argument("Datas Invalidas");
-    }
-    if (datainit.getAno() == datafim.getAno() && datainit.getMes() > datafim.getMes()) {
-        throw std::invalid_argument("Datas Invalidas");
-    }
-    if (datainit.getAno() == datafim.getAno() && datainit.getMes() == datafim.getMes() && datainit.getDia() > datafim.getDia()) {
-        throw std::invalid_argument("Datas Invalidas");
-    }
+        if(datainit.getAno() > datafim.getAno()) {
+        throw std::invalid_argument("Data Inicial sucede Data Final :: Destino");}
+        else if(datainit.getAno() == datafim.getAno() && datainit.getMes() > datafim.getMes()){
+        throw std::invalid_argument("Data Inicial sucede Data Final :: Destino");}
+        else if (datainit.getAno() == datafim.getAno() && datainit.getMes() == datafim.getMes() && datainit.getDia() > datafim.getDia()) {
+        throw std::invalid_argument("Data Inicial sucede Data Final :: Destino");}
+
     return true;
 }
+
 
 #endif

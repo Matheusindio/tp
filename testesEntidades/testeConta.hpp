@@ -1,3 +1,6 @@
+#ifndef TESTE_CONTA_HPP_INCLUDED
+#define TESTE_CONTA_HPP_INCLUDED
+
 #include "../entidades/conta.hpp"
 #include "../dominios/codigo.hpp"
 #include "../dominios/senha.hpp"
@@ -16,6 +19,6 @@ class TUConta{
         const static int SUCESSO = 0;
         const static int FALHA = -1;
         int run();
-}
+};
 
-
+#endif

@@ -1,3 +1,6 @@
+#ifndef TESTE_ATIVIDADE_HPP_INCLUDED
+#define TESTE_ATIVIDADE_HPP_INCLUDED
+
 #include "../dominios/data.hpp"
 #include "../dominios/dinheiro.hpp"
 #include "../dominios/duracao.hpp"
@@ -12,7 +15,7 @@ private:
     const std::string VALOR_VALIDO_CODIGO = "645213"; 
     const std::string VALOR_VALIDO_HORARIO = "20:00"; 
     const static int VALOR_VALIDO_DURACAO = 10; 
-    const static float VALOR_VALIDO_PRECO = 100; 
+    const float VALOR_VALIDO_PRECO = 100; 
     const static int VALOR_VALIDO_AVALIACAO = 4; 
     const std::string VALOR_VALIDO_NOME = "SPFC"; 
     const std::string VALOR_VALIDO_DATA = "02/07/04"; 
@@ -27,3 +30,5 @@ public:
     const static int FALHA = -1;  
     int run();
 };
+
+#endif

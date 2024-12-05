@@ -1,3 +1,6 @@
+#ifndef TESTE_VIAGEM_HPP_INCLUDED
+#define TESTE_VIAGEM_HPP_INCLUDED
+
 #include "../entidades/viagem.hpp"
 #include "../dominios/codigo.hpp"
 #include "../dominios/nome.hpp"
@@ -21,3 +24,4 @@ public:
     int run(); 
 };
 
+#endif

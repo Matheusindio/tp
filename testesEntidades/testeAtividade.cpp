@@ -33,7 +33,7 @@ void TUAtividade::testarCenario(){
     atividade->setNome(nome);
     atividade->setData(data);
     
-    /*metodo entidade dps metodo dominio*/
+    
     if (atividade->getCode().getValor() != (VALOR_VALIDO_CODIGO))
         estado = FALHA;     
     if (atividade->getHorario().getHorario() != (VALOR_VALIDO_HORARIO))

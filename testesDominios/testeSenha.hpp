@@ -1,5 +1,5 @@
-#ifndef TESTES_HPP_INCLUDED
-#define TESTES_HPP_INCLUDED
+#ifndef TESTE_SENHA_HPP_INCLUDED
+#define TESTE_SENHA_HPP_INCLUDED
 #include <stdexcept>
 #include "../dominios/senha.cpp"
 

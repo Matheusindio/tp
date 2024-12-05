@@ -10,7 +10,9 @@
 #include "../testesDominios/testeSenha.cpp"
 #include "../testesEntidades/testeviagem.cpp"
 #include "../testesEntidades/testeDestino.cpp"
-
+#include "../testesEntidades/testeConta.cpp"
+#include "../testesEntidades/testeHospedagem.cpp"
+#include "../testesEntidades/testeAtividade.cpp"
 
 using namespace std;
 
@@ -122,6 +124,36 @@ int main()
             break;
         
         case TUDestino::FALHA:cout << "FALHA Entidade Destino" << endl;
+            break;
+        }
+
+        TUConta testeConta;
+        switch (testeConta.run())
+        {
+        case TUConta::SUCESSO:cout << "SUCESSO Entidade Conta" << endl;
+            break;
+        
+        case TUConta::FALHA:cout << "FALHA Entidade Conta" << endl;
+            break;
+        }
+
+        TUAtividade testeAtividade;
+        switch (testeAtividade.run())
+        {
+        case TUAtividade::SUCESSO:cout << "SUCESSO Entidade Atividade" << endl;
+            break;
+        
+        case TUAtividade::FALHA:cout << "FALHA Entidade Atividade" << endl;
+            break;
+        }
+
+        TUHospedagem testeHospedagem;
+        switch (testeHospedagem.run())
+        {
+        case TUHospedagem::SUCESSO:cout << "SUCESSO Entidade Avaliação" << endl;
+            break;
+        
+        case TUHospedagem::FALHA:cout << "FALHA Entidade Avaliação" << endl;
             break;
         }
     return 0;

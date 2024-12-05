@@ -15,7 +15,7 @@ void TUConta::testarCenario(){
     codigo.setValor(VALOR_VALIDO_CODIGO);
     senha.setValor(VALOR_VALIDO_SENHA);
     conta->setCode(codigo);
-    conta->setPass(senha)
+    conta->setPass(senha);
 
     if(conta->getCode().getValor() != VALOR_VALIDO_CODIGO)
     estado = FALHA;

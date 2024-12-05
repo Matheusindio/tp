@@ -1,3 +1,6 @@
+#ifndef TESTE_HOSPEDAGEM_HPP_INCLUDED
+#define TESTE_HOSPEDAGEM_HPP_INCLUDED
+
 #include "../entidades/hospedagem.hpp"
 #include "../dominios/codigo.hpp"
 #include "../dominios/nome.hpp"
@@ -20,4 +23,6 @@ class TUHospedagem{
         const static int SUCESSO = 0;
         const static int FALHA = -1;
         int run();
-}
+};
+
+#endif

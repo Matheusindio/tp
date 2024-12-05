@@ -1,7 +1,7 @@
 #include "testeHospedagem.hpp"
 
-voind TUHospedagem::setUp(){
-    codigo = new Codigo();
+void TUHospedagem::setUp(){
+    hospedagem = new Hospedagem();
     estado = SUCESSO;
 }
 
@@ -21,7 +21,7 @@ void TUHospedagem::testarCenario(){
     hospedagem->setAvaliation(avaliacao);
     hospedagem->setCode(codigo);
     hospedagem->setName(nome);
-    hospedagem->setmoney(dinheiro)
+    hospedagem->setMoney(dinheiro);
 
     if(hospedagem->getAvaliation().getValor() != VALOR_VALIDO_AVALIACAO)
         estado = FALHA;
@@ -29,11 +29,11 @@ void TUHospedagem::testarCenario(){
         estado = FALHA;
     if(hospedagem->getName().getValor() != VALOR_VALIDO_NOME)
         estado = FALHA;
-    if(hospedagem->getMoney().getValor( != VALOR_VALIDO_DINHEIRO))
+    if(hospedagem->getMoney().getValor() != VALOR_VALIDO_DINHEIRO)
         estado = FALHA;
 }
 
-int TUDestino::run(){
+int TUHospedagem::run(){
     setUp();
     testarCenario();
     tearDown();
