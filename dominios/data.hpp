@@ -16,28 +16,28 @@ class Data {
     public:
         
         bool setData(std::string data); 
-        std::string getData() const;
-        bool setDia(std::string data);
-        bool setMes(std::string data);
-        bool setAno(std::string data);
-        int getDia() const;
-        int getMes() const;
-        int getAno() const;         
+        std::string getData();
+        int getDia();
+        int getMes();
+        int getAno();         
 };
 
 
 
-inline std::string Data::getData() const {
+inline std::string Data::getData(){
     return data;
 }
 
-inline int Data::getDia() const {
+inline int Data::getDia(){
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     return dia;
 }
-inline int Data::getMes() const {
+inline int Data::getMes(){
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     return mes;
 }
-inline int Data::getAno() const {
+inline int Data::getAno(){
+    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
     return ano;
 }
 

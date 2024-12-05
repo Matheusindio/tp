@@ -86,22 +86,3 @@ bool Data::setData(std::string data) {
 }
 
 
-bool Data::setDia(std::string data)
-{
-    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
-    this -> dia = dia;
-    return true;
-}
-
-bool Data::setMes(std::string data)
-{
-    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
-    this -> mes = mes;
-    return true;
-}
-bool Data::setAno(std::string data)
-{
-    std::sscanf(data.c_str(), "%2d/%2d/%2d", &dia, &mes, &ano);
-    this -> ano = ano;
-    return true;
-}
