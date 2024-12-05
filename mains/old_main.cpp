@@ -44,36 +44,15 @@ Destino destiny;
 Data datainit;
 Data datafim;
 try {
-    if (code.setValor("ABCeeE") && nomear.setValor("DANIEL1234") && aval.setValor(5) &&
-        datainit.setData("10/01/04") && datafim.setData("30/02/04")) {
-        
-        destiny.setCode(code);
-        destiny.setName(nomear);
-        destiny.setAvaliation(aval);
+    if (datainit.setData("11/12/44") && datafim.setData("11/12/44")) {
         destiny.setDatas(datainit, datafim);
-
-        cout << "Codigo = " << destiny.getCode().getValor() << endl;
-        cout << "Nome = " << destiny.getName().getValor() << endl;
-        cout << "Avaliação = " << destiny.getAvaliation().getValor() << endl;
-    if(1)
-    {
-        cout << "Data de ínicio = " << destiny.getDatainit().getData() << endl;
-        cout << "Data de término = " << destiny.getDatafim().getData() << endl;
+        cout << "Data inicial: " << destiny.getDatainit().getData() << endl;
+        cout << "Data final: " << datafim.getData() << endl;
     }
-    else {
-        std::cout << "Data inserida inexistente." << std::endl;
-    }
-    }
-        else
-    {
-        cout << "informaçoes incorretas" << endl; 
-    }
-} 
-
-
-catch (const invalid_argument& e) {
+} catch (const invalid_argument& e) {
     cerr << "Erro: " << e.what() << endl;
 }
+
 
 Hospedagem Hotel;
 Dinheiro diaria;
