@@ -2,20 +2,20 @@
 
 void ModeloAtividade::Criar(Codigo &CodigoUsuario, Codigo &CodigoAtividadeDestino, Atividade &NovaAtividade)
 {
-  ComandoSQL = "SELECT codigodestino FROM destination WHERE codigo = '" + CodigoAtividadeDestino.getValor() + "';";
+  ComandoSQL = "SELECT codigodestino FROM destino WHERE codigo = '" + CodigoAtividadeDestino.getValor() + "';";
   results.clear();
   this->Executar();
 
-  ComandoSQL = "SELECT accountCode FROM travel WHERE codigo = '" + results[0]["codigodestino"] + "';";
+  ComandoSQL = "SELECT codigoconta FROM viagem WHERE codigo = '" + results[0]["codigodestino"] + "';";
   results.clear();
   this->Executar();
 
-  if (results.empty() || results[0]["accountCode"] != CodigoUsuario.getValor())
+  if (results.empty() || results[0]["codigoconta"] != CodigoUsuario.getValor())
   {
     throw invalid_argument("Destino não existente ou pertencente a outra conta");
   }
 
-  ComandoSQL = "SELECT chegada, partida FROM destination WHERE code = '" + CodigoAtividadeDestino.getValor() + "';";
+  ComandoSQL = "SELECT chegada, partida FROM destino WHERE codigo = '" + CodigoAtividadeDestino.getValor() + "';";
   results.clear();
   this->Executar();
 
